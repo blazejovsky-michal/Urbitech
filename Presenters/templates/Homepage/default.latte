@@ -1,0 +1,53 @@
+{block content}
+    <div class="table-container">
+        <h3>Nejnovější příspěvky</h3>
+        <div class="row">
+            {foreach $posts as $post}
+                <div class="info_box col">
+                    <h4>{$post->name}</h4>
+                    <p><b>Datum vytvoření: </b>{date("d.m.Y", strtotime($post->date))}</p>
+                    <p class="indentation"><b>Popis příspěvku: </b>
+                        {if (strlen($post->property) > 50)}
+                            {substr($post->property, 0, 50)}...
+                        {else}
+                            {$post->property}
+                        {/if}
+                    </p>
+                    <div class="indentation rowTag"><b>Štítky: </b>
+                        {foreach $usedTags as $used}
+                            {if ($used->page == $post->ID)}
+                                <div class="tag">{$used->tag}</div>
+                            {/if}
+                        {/foreach}
+                    </div>
+                    <a n:href="Post:show $post->ID" type="button" class="btn btn-primary">Zobrazit více</a>
+                </div>
+            {/foreach}
+        </div>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createModal">
+            Spravovat štítky
+        </button>
+        <a n:href="Edit:create" type="button" class="btn btn-primary">Přidat stránku</a>
+    </div>
+
+    <div class="modal fade" id="createModal" tabindex="-1" aria-labelledby="createModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="createModalLabel">Tvorba/Mazání štítku</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="text" class="mark" placeholder="Zadejte název štítku, pro smazání napište název existujícího">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary save">Vytvořit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.handleOptionSave = {link save!};
+    </script>
+{/block}

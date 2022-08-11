@@ -1,0 +1,50 @@
+{block content}
+<link rel="stylesheet" href="../dist/index.css">
+<div class="table-container">
+    <h1 n:block="title">{$post->name}</h1>
+    <p><b>Datum vytvoření: </b>{date("d.m.Y", strtotime($post->date))}</p>
+    <p class="indentation_post"><b>Popis příspěvku: </b>
+        {$post->property}
+    </p>
+    <div class="indentation_post rowTag"><b>Štítky: </b>
+        {foreach $usedTags as $used}
+            {if ($used->page == $post->ID)}
+                <div class="tag">{$used->tag}</div>
+            {/if}
+        {/foreach}
+        <button id="{$post->ID}" type="button" class="btn btn-primary transform" data-bs-toggle="modal" data-bs-target="#addModal">
+            Spravovat štítky
+        </button>
+    </div>
+    <b>-Text-</b>
+    <pre class="formatter">{$post->text}</pre>
+    <a id="{$post->ID}" type="button" class="btn btn-primary delete">Smazat stránku</a>
+    <a n:href="Edit:edit $post->ID" type="button" class="btn btn-primary">Upravit stránku</a>
+</div>
+
+<div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="addModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addModalLabel">Přidat štítek</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <select class="form-select tags" aria-label="Default select example">
+                    {foreach $allTags as $tag}
+                        <option value="{$tag->Tag}">{$tag->Tag}</option>
+                    {/foreach}
+                </select>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary add">Přidat/Odebrat</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../dist/index.js"></script>
+<script>
+    window.handleOptionAdd = {link add!};
+    window.handleOptionDelete = {link delete!};
+</script>
+

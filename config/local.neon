@@ -1,0 +1,11 @@
+parameters:
+
+
+database:
+	dsn: 'mysql:host=127.0.0.1;dbname=urbitech'
+	user: root
+	password: password
+
+security:
+	users:
+		admin: admin
