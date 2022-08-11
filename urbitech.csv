@@ -1,0 +1,65 @@
+"ID","date","property","name","text"
+"1","2022-08-10","property 1","stranka 1","<div class=""table-container"">
+        <h3>Nejnovější příspěvky</h3>
+        <div class=""row"">
+            <div class=""info_box col"">
+                <h4>Název stránky</h4>
+                <p>Datum vytvoření stránky</p>
+                <p>Nějaký popi"
+"2","2022-08-10","property 2property 2property 2property 2property 2","stranka 2","<h1>Random Quote Generator</h1>
+<div class=""white-box"">
+  <div class=""quote"">
+    <i class=""fa fa-quote-left fa-3x""></i> 
+    <p class=""random-quote""> <span id=""text""></span></p>
+  </div>
+  <div class=""random-author"">- <span id=""author""></span>
+  </div>
+  <div class= ""buttons"">
+    
+<a id=""tweet"" href=""""https://twitter.com/intent/tweet"""" title=""Tweet this!""><button class= ""button""><i class= ""fa fa-twitter""></i></button></a>
+    
+    <div class= ""new-quote-button"" >
+    <button class=""button"" id=""new-quote""> New Quote
+    </div>
+  </div>
+</div>"
+"3","2022-08-10","property 3","Stranka 3","<div class=""table-container"">
+        <h3>Nejnovější příspěvky</h3>
+        <div class=""row"">
+            <div class=""info_box col"">
+                <h4>Název stránky</h4>
+                <p>Datum vytvoření stránky</p>
+                <p>Nějaký popi"
+"13","2022-08-11","popis stránky 4","Stránka 4","<h1>Random Quote Generator</h1>
+<div class=""white-box"">
+  <div class=""quote"">
+    <i class=""fa fa-quote-left fa-3x""></i> 
+    <p class=""random-quote""> <span id=""text""></span></p>
+  </div>
+  <div class=""random-author"">- <span id=""author""></span>
+  </div>
+  <div class= ""buttons"">
+    
+<a id=""tweet"" href=""""https://twitter.com/intent/tweet"""" title=""Tweet this!""><button class= ""button""><i class= ""fa fa-twitter""></i></button></a>
+    
+    <div class= ""new-quote-button"" >
+    <button class=""button"" id=""new-quote""> New Quote
+    </div>
+  </div>
+</div>"
+"ID","Tag"
+"1","Štítek 1"
+"2","Štítek 2"
+"3","Štítek 3"
+"4","Štítek 4"
+"5","Štítek 5"
+"6","Štítek 6"
+"ID","page","tag"
+"5","3","Štítek 3"
+"10","3","Štítek 1"
+"11","2","Štítek 3"
+"19","13","Štítek 2"
+"20","13","Štítek 4"
+"21","13","Štítek 6"
+"22","13","Štítek 1"
+"23","13","Štítek 3"

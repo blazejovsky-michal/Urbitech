@@ -1,0 +1,7 @@
+-Poznámky k úkolu-
+
+Místo umístění součtu stránek do menu, by bylo optimálnější využití výpisu do pop-up bočního menu.
+Nejvíce času mi zabral frontend, se kterým ani teď nejsem spokojen, nicméně funkce backendu jsou v pořádku.
+Volil jsem přihlášení přes další okno, avšak možná pomocí RedrawControl by byla šťastnější volba ho načíst v modálním okně, jako tomu je u statických prvků projektu.
+
+Poznámek je více, v místech jsou to drobnosti, místy jsou to střední pochyby.
